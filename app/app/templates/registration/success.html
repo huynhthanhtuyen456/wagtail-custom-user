@@ -1,0 +1,33 @@
+{% load static %}
+{% load account %}
+{% user_display user as user_display %}
+{% load i18n %}
+<html lang="en">
+<head>
+    <style>
+    body {
+        margin: 0;
+    }
+
+    h1, h2, h3 {
+        font-family: 'Open Sans', 'Helvetica', 'Arial', sans-serif;
+        font-weight: 400;
+    }
+
+    p {
+        color: black;
+        font-family: 'Open Sans', 'Helvetica', 'Arial', sans-serif;
+    }
+
+</style>
+</head>
+<body>
+
+    <div class="body-holder" style="padding-left: 20px">
+        <h3 style="padding: 20px 0; font-weight: bold;">Hi {{ user.email }},</h3>
+        <p style="display:inline"> We have just registered successfully with {{user.email}}.</p>
+        <p style="padding-bottom: 30px;">Thank you for using FinSC Platform.</p>
+    </div>
+</div>
+</body>
+</html>

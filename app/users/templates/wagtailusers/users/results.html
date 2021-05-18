@@ -1,0 +1,7 @@
+{% extends "wagtailusers/users/results.html" %}
+
+{% block extra_fields %}
+    {% include "wagtailadmin/shared/field_as_li.html" with field=form.phone_number %}
+    {% include "wagtailadmin/shared/field_as_li.html" with field=form.is_verified_email %}
+    {% include "wagtailadmin/shared/field_as_li.html" with field=form.is_active %}
+{% endblock extra_fields %}
