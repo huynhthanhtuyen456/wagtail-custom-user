@@ -36,7 +36,7 @@ MIDDLEWARE += ['whitenoise.middleware.WhiteNoiseMiddleware', ]
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'  # output to console
-DEFAULT_FROM_EMAIL = "it.admin@goldenkey-software.com"
+DEFAULT_FROM_EMAIL = os.environt['DEFAULT_FROM_EMAIL']
 # SEND MAIL
 EMAIL_HOST = os.environ['EMAIL_HOST']
 EMAIL_PORT = os.environ['EMAIL_PORT']
