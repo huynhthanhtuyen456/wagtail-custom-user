@@ -38,10 +38,10 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'  # output to console
 DEFAULT_FROM_EMAIL = "it.admin@goldenkey-software.com"
 # SEND MAIL
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-EMAIL_HOST_USER = 'it.admin@goldenkey-software.com'
-EMAIL_HOST_PASSWORD = 'aoujyxlcwpcqwntt'
+EMAIL_HOST = os.environ['EMAIL_HOST']
+EMAIL_PORT = os.environ['EMAIL_PORT']
+EMAIL_HOST_USER = os.environ['EMAIL_HOST_USER']
+EMAIL_HOST_PASSWORD = os.environ['EMAIL_PASSWORD']
 EMAIL_USE_TLS = True
 
 ALLOWED_HOSTS = os.getenv('DJANGO_ALLOWED_HOSTS', default='template-api.goldenkey-software.com')
